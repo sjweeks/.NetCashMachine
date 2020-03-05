@@ -48,7 +48,7 @@ namespace cSharpCashMachine
             {
                 Console.WriteLine("Deposit Funds");
                 Console.ReadKey();
-                deposit(170, 60);
+                deposit();
             }
             else if (userInput == "4")
             {
@@ -83,12 +83,14 @@ namespace cSharpCashMachine
                 Console.WriteLine("Are you sure you'd like to change your pin? Please enter Y or N");
                 userInput = Console.ReadLine();
 
-                if (userInput == "Y"){
+                if (userInput == "Y")
+                {
                     Console.WriteLine("Your Pin has now been changed, you will be taken back to the options");
                     Console.ReadKey();
                     optionFunc();
                 }
-                else if (userInput == "N"){
+                else if (userInput == "N")
+                {
                     Console.WriteLine("Your pin has not been changed, you will be taken back to options");
                     Console.ReadKey();
                     optionFunc();
@@ -133,7 +135,7 @@ namespace cSharpCashMachine
 
             Console.WriteLine("How much would you like to withdraw?");
             userInput = Console.ReadLine();
-            
+
             bankBalance -= Convert.ToInt32(userInput);
 
             Console.WriteLine("your new balance is: {0}", bankBalance);
@@ -154,12 +156,17 @@ namespace cSharpCashMachine
             }
         }
 
-        void deposit(int bankBalance, int depositAmount)
+        void deposit()
         {
+            int bankBalance = 200;
             string userInput;
 
-            bankBalance += depositAmount;
-            Console.WriteLine("You have deposited {0}, your new balance is {1}", depositAmount, bankBalance);
+            Console.WriteLine("How much would you like to deposit?");
+            userInput = Console.ReadLine();
+
+            bankBalance += Convert.ToInt32(userInput);
+
+            Console.WriteLine("You have deposited {0}, your new balance is {1}", userInput, bankBalance);
 
             Console.WriteLine("Is there anything else you'd like to do? 1-Back to options, 2-Quit");
             userInput = Console.ReadLine();
