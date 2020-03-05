@@ -1,4 +1,4 @@
-#Project Profile#
+#Project Profile
 
 Using C#
 
@@ -11,15 +11,15 @@ Using C#
   - Change pin
   - Exit
 
-##Areas of improvement##
+##Areas of improvement
 This project is fairly simple, however I will look to improve it by ensuring the balance is specificed and changed throughout all of the functions as opposed to just changing it after one action. 
 Also further to this, it could be changed so there are different users who use the cash machine. 
 
-##How to initialize##
+##How to initialize
 - Download - https://dotnet.microsoft.com/download
 - If using VS Code, download the C# extensions 
 
-##How to use Cash Machine##
+##How to use Cash Machine
 - Enter pin (currently set in stone however this will change)
 - If pin incorrect then it will loop around until the correct pin is entered
 - If pin is correct, the options will be presented
